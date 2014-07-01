@@ -1,0 +1,21 @@
+<div class="pricing-tables">
+<h1></h1>
+<p></p>
+<div class="row">
+<!-- Thumbnails -->
+<% @products.each do |p| %>
+  <div class="col-sm-3 col-md-3">
+   <div class="plan">
+      <div class="head">
+        <h2><%= p.name %></h2>
+        <div class="price">
+          <span class="symbol">€</span><%= p.price %>
+        </div>
+      </div>  
+
+   </div>
+  </div>
+<% end %>
+  <!-- End Thumbnails -->
+</div> <!-- row-->
+</div> <!-- pricing-tables -->
