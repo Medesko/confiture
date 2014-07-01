@@ -1,9 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:100,400,300,600,700);
-/*
-
-Author: Rashid Shafique | rmughal@gmail.com
-
-*/
 body {
   background: #eaeaea;
   padding: 90px 0 0 0;
@@ -83,6 +78,7 @@ body * {
   background: #fff;
   border-radius: 4px;
   margin: 20px 0;
+  float: left;
  }
   .plan .head {
     border-top-left-radius: 4px;
@@ -120,8 +116,7 @@ body * {
       color: #aaa;
       font-size: 14px; }
   .plan .btn {
-    padding: 8px 10px;
-    text-transform: uppercase;
+    padding: 6px 10px;
     font-weight: 500; 
     float: right;
   }
@@ -183,4 +178,8 @@ body * {
   bottom: 0px;
   right: 0px;
   left: 0px;
+}
+.minithumb{
+  width: 100%;
+  height: 100%;
 }

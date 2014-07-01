@@ -2,6 +2,7 @@ class FrontendController < ApplicationController
   
   def index
     @section = "home"
-    @products = Product.all
+    @featured_products = Product.featured
+
   end
 end

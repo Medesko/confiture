@@ -1,0 +1,20 @@
+<div class="pricing-tables">
+<h1>Tous les produits</h1>
+<p></p>
+<div class="row">
+<div class="col-sm-6 col-md-6">
+ <div class="plan">
+    <div class="head">
+      <h2>    <%= @products.name %></h2>
+      <div class="price">
+        <span class="symbol">€</span><%= @products.price %>
+      </div>
+    </div>
+    <div class="picture-box">
+      <%= link_to(image_tag("rhubarbe.jpg", :class => 'minithumb'), p )%>
+    </div> 
+    <button type="button" class="btn btn-success">Ajouter au panier</button>   
+ </div>
+</div>
+</div>
+</div>

@@ -7,14 +7,12 @@
        <span class="icon-bar"></span>
        <span class="icon-bar"></span>
      </button>
-     <a class="navbar-brand" href="#">
-        Confituresis
-     </a>
+     <%= link_to 'Confituresis', root_path, :class => "navbar-brand" %>
    </div>
    <div class="navbar-collapse collapse">
      <ul class="nav navbar-nav">
-       <li><a href="#">Accueil</a></li>            
-       <li><a href="#">Confitures</a></li>            
+       <li><%= link_to 'Accueil', root_path %></li>            
+       <li><%= link_to 'Confitures', products_path %></li>            
        <li><a href="#">Contact</a></li>            
      </ul>
    </div><!--/.nav-collapse -->

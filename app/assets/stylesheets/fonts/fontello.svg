@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2014 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="plus" unicode="&#xe801;" d="m550 400q30 0 30-50t-30-50l-210 0l0-210q0-30-50-30t-50 30l0 210l-210 0q-30 0-30 50t30 50l210 0l0 210q0 30 50 30t50-30l0-210l210 0z" horiz-adv-x="580" />
+<glyph glyph-name="feather" unicode="&#xe800;" d="m60-138q-6-20-26-8q-18 8-16 34q4 100 50 226q-100 154-52 316q10-32 32-78t44-80t32-30q8 4 0 83t-11 166t25 157q22 44 80 94t104 70q-24-46-33-94t-4-78t21-32q12 0 84 120t106 122q46 4 114-29t82-65q12-24 0-79t-40-83q-44-44-146-62t-114-24q-16-10 12-34q54-48 176-20q-56-80-136-114t-132-38t-54-10q-4-24 49-54t101-14q-30-56-63-84t-54-35t-76-11t-85-8z" horiz-adv-x="698" />
+<glyph glyph-name="location" unicode="&#xe804;" d="m250 750q104 0 177-73t73-177q0-106-62-243t-126-223l-62-84q-10 12-27 35t-60 89t-76 130t-60 147t-27 149q0 104 73 177t177 73z m0-388q56 0 96 40t40 96t-40 95t-96 39t-95-39t-39-95t39-96t95-40z" horiz-adv-x="500" />
+<glyph glyph-name="right-open" unicode="&#xe805;" d="m98 626l226-236q16-16 16-40q0-22-16-38l-226-236q-16-16-40-16t-40 16q-36 36 0 80l186 194l-186 196q-36 44 0 80q16 16 41 16t39-16z" horiz-adv-x="340" />
+<glyph glyph-name="twitter" unicode="&#xe803;" d="m920 636q-36-54-94-98l0-24q0-130-60-250t-186-203t-290-83q-160 0-290 84q14-2 46-2q132 0 234 80q-62 2-110 38t-66 94q10-4 34-4q26 0 50 6q-66 14-108 66t-42 120l0 2q36-20 84-24q-84 58-84 158q0 48 26 94q154-188 390-196q-6 18-6 42q0 78 55 133t135 55q82 0 136-58q60 12 120 44q-20-66-82-104q56 8 108 30z" horiz-adv-x="920" />
+<glyph glyph-name="facebook" unicode="&#xe802;" d="m500 644l-142 0q-14 0-25-15t-11-37l0-102l178 0l0-148l-178 0l0-442l-170 0l0 442l-152 0l0 148l152 0l0 86q0 94 59 159t147 65l142 0l0-156z" horiz-adv-x="500" />
+</font>
+</defs>
+</svg>
