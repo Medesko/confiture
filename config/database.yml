@@ -12,4 +12,3 @@ development:
   password: root
   host: localhost
   port: 3306
-  socket: /tmp/mysql.sock
