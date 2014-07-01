@@ -1,0 +1,9 @@
+<%= form_tag("/admin/products", method: "post") do %>
+  <%= label_tag(:marge, "Marge:") %>
+  <%= text_field_tag(:marge) %>
+  <%= label_tag(:nom, "nom:") %>
+  <%= text_field_tag(:nom) %>
+  <%= label_tag(:prix, "prix:") %>
+  <%= text_field_tag(:prix) %>
+  <%= submit_tag("Ajouter produit") %>
+<% end %>

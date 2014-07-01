@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Rails Store Administration</title>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Krona+One' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: 'screen' %>
+</head>
+<body class="<%=@section%>">
+	
+	<div id="wraper">
+		<%= render :partial => "frontend/header" %>
+		<div class="container" id="container">
+			<br><br><br>
+			<%= render :partial => "addProduct" %>
+
+		</div>
+		<%= render :partial => "frontend/footer" %>
+	</div>
+
+	
+</body>
+</html>
