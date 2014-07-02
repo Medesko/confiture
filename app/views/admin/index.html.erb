@@ -1,0 +1,27 @@
+<div class="pricing-tables">
+<h1>Liste des produits</h1>
+<p></p>
+<div class="row">
+<!-- Thumbnails -->
+<% @products.each do |product| %>
+  <div class="col-sm-3 col-md-3">
+   <div class="plan">
+      <div class="head">
+        <h2><%= link_to product.name , product %></h2>
+        <div class="price">
+          <span class="symbol">€</span><%= product.price %>
+        </div>
+      </div>
+      <div class="picture-box">
+        <%= link_to(image_tag("rhubarbe.jpg", :class => 'minithumb'), product )%>
+      </div>   
+         <%= link_to product, :class => "btn btn-view btn-grey" do %>
+            <span class="entypo search"></span>
+         <% end %>
+
+   </div>
+  </div>
+<% end %>
+  <!-- End Thumbnails -->
+</div> <!-- row-->
+</div> <!-- pricing-tables -->

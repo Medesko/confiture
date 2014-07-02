@@ -1,0 +1,53 @@
+<div class="pricing-tables">
+<hr>
+<h1>
+  Tous les produits
+  <%= link_to new_admin_product_path() do %>
+    <button type="button" class="btn btn-primary" style="float:right;">Ajouter un produit</button> 
+  <% end %>
+</h1>
+<p></p>
+<hr>
+<div class="row">
+  <div class="col-md-12">
+    <form action="#" method="post" enctype="multipart/form-data">
+      <div class="cart-info">
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th class="image">Image</th>
+              <th class="name">Nom prodduit</th>
+              <th class="quantity">Quantite</th>
+              <th class="price">Prix</th>
+              <th class="price">Marge</th>
+              <th class="price">Date de création</th>
+              <th></th>
+            </tr>
+          </thead>
+          <% @products.each do |product| %>
+            <tbody>
+              <tr>
+                <td class="image muted center_text"></td>
+                <td class="name">
+                  <%= product.name %>
+                </td>
+                <td class="quantity"></td>
+                <td class="price"><span>€</span><%= product.price %></td>
+                <td class="marge"><%= product.margin_product %><span>%</span></td>
+                <td class="date"></td>
+
+                <td>
+                  <%= link_to 'Voir', admin_product_path(product) %> |
+                  <%= link_to 'Modifier', edit_admin_product_path(product) %> |
+                  <%= link_to 'Supprimer', admin_product_path(product),
+                                      method: :delete, data: { confirm: 'Are you sure?' } %>
+                </td>
+              </tr>
+            </tbody>
+          <% end %>
+        </table>
+      </div>
+    </form>
+  </div>
+</div> <!-- row-->
+</div> <!-- pricing-tables -->

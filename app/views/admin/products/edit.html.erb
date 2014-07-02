@@ -1,0 +1,33 @@
+<div class="pricing-tables">
+<hr>
+<h2>
+  Modifier
+</h2>
+<p></p>
+<hr>
+<div class="row">
+  <div class="col-md-8">
+  <div class="content" data-slug="panel1">
+  <%= form_for :products, url: {action:'update'}, method: "PUT" ,  :class=> "form-horizontal  form-border no-margin" do |f| %>
+      <div class="form-group">
+        <label for="exampleInputEmail1"><%= f.label :name %></label>
+        <%= f.text_field :name, :class =>"form-control"%>
+      </div>
+      <div class="form-group">
+        <label for=""><%= f.label :price %></label>
+        <%= f.text_field :price, :class =>"form-control" %>
+      </div>
+      <div class="form-group">
+        <label for=""><%= f.label :margin_product %></label>
+        <%= f.text_field :margin_product, :class =>"form-control" %>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile"><%= f.label :img %></label>
+        <%= f.file_field :img, :class =>"form-control" %>
+      </div>
+      <%= f.submit "Publier", :class=> "btn btn-default" %>
+    <% end %>
+  </div>
+  </div>
+</div>
+</div>
