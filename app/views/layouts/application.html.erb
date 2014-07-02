@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-  <title>Rails Store</title>
+  <title>Confiture Land</title>
   <link href='http://fonts.googleapis.com/css?family=Playfair+Display|Krona+One' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: 'screen' %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%=@section%>">
-	
-	<div id="wraper">
-	<%= render :partial => "frontend/header" %>
 
-		<div class="container" id="container">
+	<div id="wrapper">
+		<%= render :partial => "frontend/header" %>
+	
+		<div class="container">
 			<%= yield %>
 		</div>
-
 	</div>
 
 	<%= render :partial => "frontend/footer" %>
-	
+
 </body>
 </html>
