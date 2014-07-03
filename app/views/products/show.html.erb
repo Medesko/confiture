@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="picture-box">
-      <%= link_to(image_tag("rhubarbe.jpg", :class => 'minithumb'), p )%>
+      <%= image_tag @products.picture.url (:large) %>
     </div> 
     <button type="button" class="btn btn-success">Ajouter au panier</button>   
  </div>

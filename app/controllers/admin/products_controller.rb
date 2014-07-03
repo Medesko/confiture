@@ -10,10 +10,12 @@ class Admin::ProductsController < Admin::AdminController
 
 	def new
 		@products = Product.new
+		@ingredients = Ingredient.all
 	end
 
 	def create
-		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :img ))
+		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :picture ))
+
 		if @products.save
 			redirect_to @products
 		else
@@ -26,7 +28,7 @@ class Admin::ProductsController < Admin::AdminController
 	end
 	def update
 		@products = Product.find(params[:id])
-		if @products.update(params[:products].permit(:name, :price, :margin_product, :img))
+		if @products.update(params[:products].permit(:name, :price, :margin_product, :picture))
 			redirect_to admin_product_path
 		else
 			render 'edit'

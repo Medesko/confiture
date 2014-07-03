@@ -15,6 +15,9 @@
        <li><%= link_to 'Confitures', products_path %></li>            
        <li><a href="#">Contact</a></li>            
      </ul>
+     <% if !admin_signed_in? %>
+       <div class="login"><%= link_to 'Connexion', admin_products_path %></div>
+     <% end %>
    </div><!--/.nav-collapse -->
    </div>
  </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702084009) do
+ActiveRecord::Schema.define(version: 20140703102337) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -31,30 +31,37 @@ ActiveRecord::Schema.define(version: 20140702084009) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
-  create_table "models", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
+  create_table "clients", force: true do |t|
+    t.string   "name"
+    t.string   "tel"
+    t.string   "email"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "models", ["email"], name: "index_models_on_email", unique: true, using: :btree
-  add_index "models", ["reset_password_token"], name: "index_models_on_reset_password_token", unique: true, using: :btree
+  add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
+
+  create_table "ingredients", force: true do |t|
+    t.string   "name_ingredient"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ingredients_products", id: false, force: true do |t|
+    t.integer "ingredient_id", null: false
+    t.integer "product_id",    null: false
+  end
 
   create_table "products", force: true do |t|
     t.string   "name"
-    t.decimal  "margin_product", precision: 10, scale: 0
-    t.decimal  "price",          precision: 5,  scale: 2
+    t.decimal  "price",                precision: 5,  scale: 2
+    t.decimal  "margin_product",       precision: 10, scale: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.string   "picture_file_size"
   end
 
 end

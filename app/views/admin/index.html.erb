@@ -13,12 +13,11 @@
         </div>
       </div>
       <div class="picture-box">
-        <%= link_to(image_tag("rhubarbe.jpg", :class => 'minithumb'), product )%>
+        <%= image_tag product.picture.url (:medium) %>
       </div>   
-         <%= link_to product, :class => "btn btn-view btn-grey" do %>
-            <span class="entypo search"></span>
-         <% end %>
-
+     <%= link_to product, :class => "btn btn-view btn-grey" do %>
+        <span class="entypo search"></span>
+     <% end %>
    </div>
   </div>
 <% end %>

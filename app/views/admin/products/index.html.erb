@@ -27,7 +27,7 @@
           <% @products.each do |product| %>
             <tbody>
               <tr>
-                <td class="image muted center_text"></td>
+                <td class="image muted center_text"> <%= image_tag product.picture.url (:small) %></td>
                 <td class="name">
                   <%= product.name %>
                 </td>
@@ -40,7 +40,7 @@
                   <%= link_to 'Voir', admin_product_path(product) %> |
                   <%= link_to 'Modifier', edit_admin_product_path(product) %> |
                   <%= link_to 'Supprimer', admin_product_path(product),
-                                      method: :delete, data: { confirm: 'Are you sure?' } %>
+                                      method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer ' } %>
                 </td>
               </tr>
             </tbody>

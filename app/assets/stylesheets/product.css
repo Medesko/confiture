@@ -17,7 +17,7 @@ body * {
   background: #fff; }
   .navbar ul > li > a {
     font-weight: 600;
-    padding: 42px;
+    padding:42px 25px;
     color: #434a54;
     font-size: 12px;
     text-transform: uppercase; }
@@ -195,4 +195,14 @@ body * {
 .cart-total td {
   padding: 3px;
   text-align: right;
+}
+.login{
+  text-align: right;
+  padding-top: 4px;
+}
+.radio-inline, .checkbox-inline {
+  padding-left: 0;
+}
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+  margin: 0 5px;
 }
