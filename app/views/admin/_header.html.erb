@@ -11,13 +11,14 @@
    </div>
    <div class="navbar-collapse collapse">
      <ul class="nav navbar-nav">
-       <li><%= link_to 'Aller sur le site', root_path %></li>            
        <li><%= link_to 'Les products', admin_products_path %></li>            
        <li><%= link_to 'Les ingrédients', admin_ingredients_path %></li>            
        <li><%= link_to 'Les clients', admin_clients_path %></li>            
      </ul>
+
      <% if admin_signed_in? %>
-       <div class="login">Connecté avec... <%= current_admin.email %>  <%= link_to 'Déconnexion', destroy_admin_session_path, :method => :delete  %></div>
+       <div class="login">
+       <%= link_to 'Aller sur le site', root_path %>  &nbsp; Connecté avec... <%= current_admin.email %>  <%= link_to 'Déconnexion', destroy_admin_session_path, :method => :delete  %></div>
      <% end %>
    </div><!--/.nav-collapse -->
    </div>

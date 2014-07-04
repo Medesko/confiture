@@ -32,8 +32,8 @@
       </div>
 
       <% @ingredients.each do |ingredient| %>
+      <%= check_box_tag "ingredient_id[#{ingredient.id}]", ingredient.name_ingredient %>
         <label class="checkbox-inline" for="<%= ingredient.id %>"><%= ingredient.name_ingredient %></label>
-        <%= check_box_tag ingredient.id, ingredient.name_ingredient %>
       <% end %>
       <div class="form-group">
         <label for="exampleInputFile">Images</label>

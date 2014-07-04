@@ -14,9 +14,13 @@ class Admin::ProductsController < Admin::AdminController
 	end
 
 	def create
-		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :picture ))
+		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :picture))
+		# @id_product = Product.find(params[:id])
+
+		@composition = Composition.new(params.permit[:id])
 
 		if @products.save
+			flash[:notice] = "Produit ajoute avec succes!"
 			redirect_to @products
 		else
 			render 'new'
@@ -29,6 +33,8 @@ class Admin::ProductsController < Admin::AdminController
 	def update
 		@products = Product.find(params[:id])
 		if @products.update(params[:products].permit(:name, :price, :margin_product, :picture))
+
+			flash[:notice] = "le produit a été supprimé avec succes!"
 			redirect_to admin_product_path
 		else
 			render 'edit'
@@ -36,8 +42,10 @@ class Admin::ProductsController < Admin::AdminController
 	end
 
 	def destroy
-	  @products = Product.find(params[:id])
-	  @products.destroy
-	  redirect_to admin_products_path
+		@products = Product.find(params[:id])
+		if @products.destroy
+			flash[:notice] = "le produit a été supprimé avec succes!"
+			redirect_to admin_products_path
+		end
 	end
 end

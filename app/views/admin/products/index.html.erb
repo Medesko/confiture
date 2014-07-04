@@ -34,7 +34,7 @@
                 <td class="quantity"></td>
                 <td class="price"><span>€</span><%= product.price %></td>
                 <td class="marge"><%= product.margin_product %><span>%</span></td>
-                <td class="date"></td>
+                <td class="date"><%= product.created_at.strftime("%b %d, %Y") %></td>
 
                 <td>
                   <%= link_to 'Voir', admin_product_path(product) %> |

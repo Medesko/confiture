@@ -6,7 +6,7 @@ class Admin::IngredientsController < Admin::AdminController
 
 	def new
 		@ingredients = Ingredient.new
-	end
+	end 
 
 	def create
 		@ingredients = Ingredient.new(params[:ingredients].permit(:name_ingredient ))
