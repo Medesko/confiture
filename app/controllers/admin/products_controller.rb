@@ -5,7 +5,7 @@ class Admin::ProductsController < Admin::AdminController
 	end
 
 	def show
-		@products = Product.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def new
@@ -14,14 +14,17 @@ class Admin::ProductsController < Admin::AdminController
 	end
 
 	def create
-		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :picture))
+		@products = Product.new(params[:products].permit(:name, :price, :margin_product, :picture, :ingredient_id))
 		# @id_product = Product.find(params[:id])
+		@ingredients = Ingredient.all
 
-		@composition = Composition.new(params.permit[:id])
-
+		@Composition = Composition.new
 		if @products.save
-			flash[:notice] = "Produit ajoute avec succes!"
-			redirect_to @products
+			@Composition.product_id = @products.id
+			@Composition.ingredient_id = @products.id
+			@Composition.save
+			flash[:notice] = "le produit a été ajouté avec succes!"
+			redirect_to admin_products_path
 		else
 			render 'new'
 		end
@@ -29,12 +32,13 @@ class Admin::ProductsController < Admin::AdminController
 
 	def edit
 		@products = Product.find(params[:id])
+		@ingredients = Ingredient.all
 	end
 	def update
 		@products = Product.find(params[:id])
 		if @products.update(params[:products].permit(:name, :price, :margin_product, :picture))
 
-			flash[:notice] = "le produit a été supprimé avec succes!"
+			flash[:notice] = "Le produit a été modifié avec succes!"
 			redirect_to admin_product_path
 		else
 			render 'edit'
@@ -44,7 +48,7 @@ class Admin::ProductsController < Admin::AdminController
 	def destroy
 		@products = Product.find(params[:id])
 		if @products.destroy
-			flash[:notice] = "le produit a été supprimé avec succes!"
+			flash[:notice] = "Le produit a été supprimé avec succes!"
 			redirect_to admin_products_path
 		end
 	end

@@ -1,4 +1,3 @@
-<div class="pricing-tables">
 <hr>
 <h2>
   Modifier
@@ -30,13 +29,16 @@
         <label for=""><%= f.label :margin_product %></label>
         <%= f.text_field :margin_product, :class =>"form-control" %>
       </div>
+      <% @ingredients.each do |ingredient| %>
+      <%= check_box_tag "ingredient_id[#{ingredient.id}]", ingredient.name_ingredient %>
+        <label class="checkbox-inline" for="<%= ingredient.id %>"><%= ingredient.name_ingredient %></label>
+      <% end %>
       <div class="form-group">
         <label for="exampleInputFile"><%= f.label :picture %></label>
         <%= f.file_field :picture, :class =>"form-control" %>
       </div>
-      <%= f.submit "Publier", :class=> "btn btn-default" %>
+      <%= f.submit "Modifier", :class=> "btn btn-default" %>
     <% end %>
   </div>
   </div>
-</div>
 </div>

@@ -1,19 +1,22 @@
-<div class="pricing-tables">
 <h1>Tous les produits</h1>
 <p></p>
 <div class="row">
 <div class="col-sm-8 col-md-8">
  <div class="plan">
     <div class="head">
-      <h2>    <%= @products.name %></h2>
+      <h2>    <%= @product.name %></h2>
       <div class="price">
-        <span class="symbol">€</span><%= @products.price %>
+        <span class="symbol">€</span><%= @product.price %>
       </div>
     </div>
+<% @product.ingredients.each do |ingredient|%>
+	<p> <%= ingredient.name_ingredient %></p>
+<% end %>
+
+
     <div class="picture-box">
-      <%= image_tag @products.picture.url (:thumb) %>
+      <%= image_tag @product.picture.url (:thumb) %>
     </div> 
  </div>
-</div>
 </div>
 </div>

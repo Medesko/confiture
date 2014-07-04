@@ -1,4 +1,3 @@
-<div class="pricing-tables">
 <hr>
 <h1>
   Les clients
@@ -10,22 +9,41 @@
 <hr>
 <div class="row">
   <div class="col-md-12">
-    <form action="#" method="post" enctype="multipart/form-data">
-      <div class="cart-info">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th class="name">Nom</th>
-            </tr>
-          </thead>
-            <tbody>
-              <tr>
-                <td class="name"></td>
-              </tr>
-            </tbody>
-        </table>
-      </div>
-    </form>
+  <div class="cart-info">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th class="name">Id</th>
+          <th class="quantity">Nom</th>
+          <th class="price">Tel</th>
+          <th class="price">Email</th>
+          <th class="price">Adresse</th>
+          <th class="price">Date de création</th>
+          <th></th>
+        </tr>
+      </thead>
+      <% @clients.each do |client| %>
+        <tbody>
+          <tr>
+            <td>
+              <%= client.id %>
+            </td>
+            <td><%= client.name %></td>
+            <td><%= client.tel %></td>
+            <td><%= client.email %></td>
+            <td ><%= client.address %></td>
+            <td class="date"><%= client.created_at.strftime("%b %d, %Y") %></td>
+
+            <td>
+              <%= link_to 'Voir', admin_client_path(client) %> |
+              <%= link_to 'Modifier', edit_admin_client_path(client) %> |
+              <%= link_to 'Supprimer', admin_client_path(client),
+                                  method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer ' } %>
+            </td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
+  </div>
   </div>
 </div> <!-- row-->
-</div> <!-- pricing-tables -->

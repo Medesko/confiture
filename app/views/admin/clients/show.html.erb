@@ -1,0 +1,28 @@
+<h1>Clients</h1>
+<p></p>
+<div class="row">
+<div class="col-sm-12 col-md-12">
+    <div class="head">
+      <h2>    <%= @client.name %></h2>
+      <div>
+        <%= @client.tel %>
+      </div>
+      <div>
+        <%= @client.email %>
+      </div>
+      <div>
+        <%= @client.address %>
+      </div>
+    </div>
+    <%= link_to 'Modifier', edit_admin_client_path %> |
+    <%= link_to 'Supprimer', admin_client_path,
+                       method: :delete, data: { confirm: 'Etes vous sur de vouloir supprimer ' } %>
+</div>
+<div class="col-sm-12 col-md-12">
+  <div class="plan">
+    <div class="head">
+    Historique des commandes
+    </div>
+  </div>
+</div>
+</div>

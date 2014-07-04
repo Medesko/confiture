@@ -2,6 +2,8 @@ class Product < ActiveRecord::Base
 	validates :name, presence: true
   	validates :price, presence: true
 
+  	has_and_belongs_to_many :ingredients, join_table: "Compositions"
+
 	def self.featured
 		Product.order(created_at: :desc).limit(4)
 	end

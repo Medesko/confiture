@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703102337) do
+ActiveRecord::Schema.define(version: 20140704105117) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -42,15 +42,17 @@ ActiveRecord::Schema.define(version: 20140703102337) do
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
 
-  create_table "ingredients", force: true do |t|
-    t.string   "name_ingredient"
+  create_table "compositions", force: true do |t|
+    t.integer  "product_id"
+    t.integer  "ingredient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "ingredients_products", id: false, force: true do |t|
-    t.integer "ingredient_id", null: false
-    t.integer "product_id",    null: false
+  create_table "ingredients", force: true do |t|
+    t.string   "name_ingredient"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
